@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/desktop-styles.css" />
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/showReview.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./Images/logo.png" alt="" />
+      <div class="header-container">
+        <a href="./index.html">Меню</a>
+        <a href="#">О нас</a>
+        <a href="#">Галерея</a>
+        <a href="./map_contact.html">Контакти</a>
+      </div>
+      <div class="menu_button">
+        <div class="menu_button_line"></div>
+        <div class="menu_button_line"></div>
+        <div class="menu_button_line"></div>
+      </div>
+    </header>
+
+    <div class="top_content">
+      <div class="welcome">
+        <div class="welcome_text">
+          <img src="./Images/Rectangle_38.png" alt="" class="horse_logo" />
+
+          <p class="welcom_text">Ласкаво просимо до</p>
+          <p class="welcom_text_name">BLANCA RESTAURANT</p>
+          <div class="menu_container">
+            <button class="button_menu">Меню</button>
+            <div class="menu">
+              <button id="food">Їжа</button>
+              <button id="drinks">Напої</button>
+              <button id="dessert">Десерти</button>
+            </div>
+          </div>
+        </div>
+        <div class="dishLogo">
+          <img src="./Images/Rectangle_33.png" alt="" />
+        </div>
+      </div>
+
+      <div class="advantages">
+        <div>
+          <img src="./Images/Mask Group.svg" alt="" />
+          <p>
+            Магічна <span class="yellow">Атмосфера</span><br />
+            У нашому закладі панує магічна атмосфера, наповнена смачними
+            ароматами"
+          </p>
+        </div>
+        <div>
+          <img src="./Images/Mask Group.svg" alt="" />
+          <p>
+            Найкраща якість <span class="yellow">Їжі</span><br />
+            Якість нашої їжі - відмінна!"
+          </p>
+        </div>
+        <div>
+          <img src="./Images/Mask Group.svg" alt="" />
+          <p>
+            Незабутній <span class="yellow">Смак</span><br />
+            Наші кухарі готують дивовижно смачні страви.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div>
+        <p class="story_title">Наша <span class="yellow">Історія</span></p>
+        <p class="story_text">
+          Як і у будь-якого іншого неповторного місця, у нас є своя власна,
+          особлива історія. Ідея ресторану з'явилася перед засновниками
+          несподівано. Під час прогулянки по лісі засновник нашого ресторану
+          застряг сотні кілометрів від найближчого населеного пункту. Подалі від
+          цивілізації і зв'язку їм довелося швидко обладнати собі примітивне
+          господарство, забезпечувати себе їжею.
+        </p>
+      </div>
+      <div><img src="./Images/images.png" alt="" /></div>
+    </div>
+    <div class="order">
+      <div class="orderText">
+        <p class="orderTextYellow">
+          Відзначте свято в одному з найкращих ресторанів.
+        </p>
+        <p class="orderTextWhite">
+          Лише цього місяця бізнес-ланч від 3000 гривень.
+        </p>
+      </div>
+      <!-- <div><button class="orderButton">ЗАМОВЛЕННЯ СТОЛИКА</button></div> -->
+      <div>
+        <a href="./wishListPage.html" class="orderButton">ЗАМОВЛЕННЯ СТОЛИКА</a>
+      </div>
+    </div>
+
+    <div class="dishes">
+      <p class="dishesTitle">Страви</p>
+      <div class="dishFoto">
+        <div><img src="./Images/Group2.png" alt="" /></div>
+        <div class="dishesMenu">
+          <!-- <div class="dishBox">
+          <div class="dishFhoto"><img src="./Images/dish-1 1.png" alt=""><div class="dishPrice">2500</div></div>
+          <div class="dishText">
+            <p class="dishTitle">Лумпия с соусом</p>
+            <p>Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами</p>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- --------------------отзиви-------------------------- -->
+      <!-- <div class="reviews"> -->
+      <div class="review reviewsRemove">
+        <p>
+          Вид з ресторану дивовижний, інтер'єр незвичайний, їжа відмінна,
+          обслуговування відмінне, закуски та десерти сподобалися, качка з
+          картоплею була чудовою, я ніколи не зустрічав таких чудових закладів у
+          Мексиці, однозначно рекомендую.
+        </p>
+        <img src="./Images/Ellipse.png" alt="" />
+        <h2>Відвідувач:</h2>
+        <h2>Серхио</h2>
+      </div>
+      <div class="review reviewsRemove">
+        <p>
+          Це звучить як чудова ідея! Я був радий би порекомендувати вам один із
+          найкращих ресторанів у вашому місті або області, де ви зможете
+          насолодитися вишуканими стравами та неперевершеним обслуговуванням. Що
+          ви вважаєте, що це може бути чудова можливість відсвяткувати особливу
+          подію або просто насолодитися вечерею в приємній компанії?
+        </p>
+        <img src="./Images/customer.png" alt="" />
+        <h2>Відвідувач:</h2>
+        <h2>Тарас</h2>
+      </div>
+      <div class="review reviewsRemove">
+        <p>
+          Заклад нас просто зачарував! Чудовий вид з ресторану, дивовижний
+          інтер'єр, неймовірна їжа і відмінне обслуговування. Ми насолодилися
+          кожним пригощанням, особливо вражаючими були закуски та десерти. Це
+          справжній шматок раю, і я з радістю рекомендую цей заклад усім!
+        </p>
+        <img src="./Images/customerW.png" alt="" />
+        <h2>Відвідувач:</h2>
+        <h2>Марія</h2>
+      </div>
+
+      <!-- </div> -->
+
+      <!-- --------------------------------------------------------------------------------------------------------------------------- -->
+
+      <h1 class="story_title">Галерея страв</h1>
+      <div class="owl-carousel owl_1">
+        <div><img src="./Images/dish_1.png" alt="" /></div>
+        <div><img src="./Images/dish_2.png" alt="" /></div>
+        <div><img src="./Images/dish_3.png" alt="" /></div>
+        <div><img src="./Images/dish_4.png" alt="" /></div>
+        <div><img src="./Images/dish_5.png" alt="" /></div>
+        <div><img src="./Images/dish_6.png" alt="" /></div>
+      </div>
+
+      <h1 class="story_title">Наші кухарі</h1>
+      <div class="owl-carousel owl_2">
+        <img src="./Images/cook_1.png" alt="" />
+        <img src="./Images/cook_2.png" alt="" />
+        <img src="./Images/cook_3.png" alt="" />
+      </div>
+
+      <!-- <div><img src="./Images/cook_4.png" alt="" /></div> -->
+
+      <footer>
+        <div>
+          <img src="./Images/logo.png" alt="" />
+          <p class="dishText text_center">
+            Наш ресторан чекає на вас, обслуговування і їжа на найвищому рівні,
+            тому що ви цього заслуговуєте.
+          </p>
+        </div>
+        <div>
+          <p class="story_text">Години роботи</p>
+          <div>
+            <p class="story_text">
+              Понеділок - П'ятниця <br />З 8:00 ранку до 9:00 вечора
+            </p>
+          </div>
+          <div>
+            <p class="story_text">
+              Суббота <br />
+              З 8:00 ранку до 9:00 вечора
+            </p>
+          </div>
+          <div>
+            <p class="story_text">
+              Неділя <br />
+              Закрито
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

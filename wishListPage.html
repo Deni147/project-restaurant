@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список бажань</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/desktop-styles.css" />
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/showReview.js" defer></script>
+  </head>
+
+  <style>
+    .inputs-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: #f7c334;
+    }
+
+    .inputs-container * {
+      margin: 4px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 250px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #999;
+    }
+
+    button {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var wishDishMenu = document.querySelector(".wishDishMenu");
+      var storedWishList = localStorage.getItem("wishList");
+      var wishList = storedWishList ? JSON.parse(storedWishList) : [];
+
+      function displayWishList() {
+        wishDishMenu.innerHTML = "";
+
+        wishList.forEach(function (dish, index) {
+          wishDishMenu.innerHTML += `
+        <div class="dishBox">
+          <div class="dishFhoto">
+            <img src="./Images/${dish.photo}" alt="${dish.name}">
+            <div class="dishPrice">${dish.price}</div>
+          </div>
+          <div class="dishText">
+            <p class="dishTitle">${dish.name}</p>
+            ${dish.text}
+          </div>
+          <button class="RemoveWishList" data-index="${index}">Видалити зі списку бажань</button>
+        </div>
+      `;
+        });
+      }
+
+      displayWishList();
+
+      wishDishMenu.addEventListener("click", function (event) {
+        if (event.target.classList.contains("RemoveWishList")) {
+          var indexToRemove = event.target.getAttribute("data-index");
+          wishList.splice(indexToRemove, 1);
+          localStorage.setItem("wishList", JSON.stringify(wishList));
+          displayWishList(); // Обновляем отображение списка
+        }
+      });
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+          // Далее можете добавить ваш код обработки формы, например, отправку данных на сервер
+          // В данном случае я просто выведу сообщение в консоль
+          alert("Замовлення відправлено! Ми вам передзвонимо.");
+          // Дополнительный код, который вы хотите выполнить при отправке формы
+        });
+    });
+
+    // ----------------------Добавления масива в ворму----------------------------
+    document.getElementById("wishListInput").value = JSON.stringify(wishList);
+  </script>
+
+  <body>
+    <header>
+      <img src="./Images/logo.png" alt="" />
+      <div class="header-container">
+        <a href="./index.html">Меню</a>
+        <a href="#">О нас</a>
+        <a href="#">Галерея</a>
+        <a href="./map_contact.html">Контакти</a>
+      </div>
+      <div class="menu_button">
+        <div class="menu_button_line"></div>
+        <div class="menu_button_line"></div>
+        <div class="menu_button_line"></div>
+      </div>
+    </header>
+    <h1 class="wishTitle">Список бажань:</h1>
+    <div class="wishDishMenu"></div>
+
+    <div class="inputs-container">
+      <form id="orderForm" action="">
+        <fieldset>
+          <input type="hidden" name="wishList" id="wishListInput" />
+          <legend>Ваші контакти</legend>
+          <div>
+            <label for="name">Введіть ваше ім'я:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Іван Іванов"
+            />
+          </div>
+          <div>
+            <label for="phone">Введіть ваш телефон:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+38 (050) 123-45-67"
+            />
+          </div>
+
+          <button type="submit">Замовити столик</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <footer>
+      <div>
+        <img src="./Images/logo.png" alt="" />
+        <p class="dishText text_center">
+          Наш ресторан чекає на вас, обслуговування і їжа на найвищому рівні,
+          тому що ви цього заслуговуєте.
+        </p>
+      </div>
+      <div>
+        <p class="story_text">Години роботи</p>
+        <div>
+          <p class="story_text">
+            Понеділок - П'ятниця <br />З 8:00 ранку до 9:00 вечора
+          </p>
+        </div>
+        <div>
+          <p class="story_text">
+            Суббота <br />
+            З 8:00 ранку до 9:00 вечора
+          </p>
+        </div>
+        <div>
+          <p class="story_text">
+            Неділя <br />
+            Закрито
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

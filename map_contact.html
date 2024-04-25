@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Контакты</title>
+    <!-- The callback parameter is required, so we use console.debug as a noop -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAaPBYR1ST25U9AE4ha2TslgA44W7iV0Y&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      gmp-map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/desktop-styles.css" />
+
+    <script src="./js/script.js" defer></script>
+    <script src="./js/showReview.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./Images/logo.png" alt="" />
+      <div class="header-container">
+        <a href="./index.html">Меню</a>
+        <a href="#">О нас</a>
+        <a href="#">Галерея</a>
+        <a href="./map_contact.html">Контакти</a>
+      </div>
+      <div class="menu_button">
+        <div class="menu_button_line"></div>
+        <div class="menu_button_line"></div>
+        <div class="menu_button_line"></div>
+      </div>
+    </header>
+    <div class="mapStyle">
+      <gmp-map
+        center="49.99720764160156,36.23314666748047"
+        zoom="14"
+        map-id="DEMO_MAP_ID"
+      >
+        <gmp-advanced-marker
+          position="49.99720764160156,36.23314666748047"
+          title="My location"
+        ></gmp-advanced-marker>
+      </gmp-map>
+      <footer>
+        <div>
+          <img src="./Images/logo.png" alt="" />
+          <p class="dishText text_center">
+            Наш ресторан чекає на вас, обслуговування і їжа на найвищому рівні,
+            тому що ви цього заслуговуєте.
+          </p>
+        </div>
+        <div>
+          <p class="story_text">Години роботи</p>
+          <div>
+            <p class="story_text">
+              Понеділок - П'ятниця <br />З 8:00 ранку до 9:00 вечора
+            </p>
+          </div>
+          <div>
+            <p class="story_text">
+              Суббота <br />
+              З 8:00 ранку до 9:00 вечора
+            </p>
+          </div>
+          <div>
+            <p class="story_text">
+              Неділя <br />
+              Закрито
+            </p>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
